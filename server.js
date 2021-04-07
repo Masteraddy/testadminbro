@@ -3,6 +3,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 
+const PORT = process.env.PORT || 3030;
+
 const AdminBroExpress = require("@admin-bro/express");
 const AdminBroMongoose = require("@admin-bro/mongoose");
 
@@ -70,4 +72,4 @@ const adminBro = new AdminBro(AdminBroOptions);
 const router = AdminBroExpress.buildRouter(adminBro);
 
 app.use(adminBro.options.rootPath, router);
-app.listen(3030, () => console.log("AdminBro is under localhost:3030"));
+app.listen(PORT, () => console.log(`AdminBro is under ${PORT}`));
