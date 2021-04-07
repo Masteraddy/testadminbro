@@ -15,6 +15,7 @@ const Filter = require("./model/Filter");
 const SiteInfo = require("./model/SiteInfo");
 const RegionInfo = require("./model/RegionInfo");
 const Service = require("./model/Service");
+const Location = require("./model/Location");
 const Property = require("./model/Property");
 const User = require("./model/User");
 const Request = require("./model/Request");
@@ -41,6 +42,7 @@ const AdminBroOptions = {
     { resource: RegionInfo, options: { navigation: atcNavigation } },
     Request,
     Service,
+    Location,
     Property,
     User,
   ],
